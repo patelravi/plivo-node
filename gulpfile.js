@@ -48,7 +48,7 @@ gulp.task('pre-test', function () {
 gulp.task('test', ['pre-test'], function (cb) {
   var mochaErr;
 
-  gulp.src('test/**/verification.js')
+  gulp.src('test/**/test.verification.js')
     .pipe(plumber())
     .pipe(mocha({ reporter: 'spec' }))
     .on('error', function (err) {
